@@ -35,12 +35,12 @@ ESC will close the dialog
 <ui2:modal keydown>
 ```
 
-Give it a name
+Give it a name. This will create functions `app.modal.my_dialog.show` and `app.modal.my_dialog.close` which can be used in templates and in the code.
 ```html
 <ui2:modal name="my_dialog">
 ```
 
-This will create functions `app.modal.my_dialog.show` and `app.modal.my_dialog.close` which can be used in templates and in the code.
+You can of course combine these parameters.
 
 ## Beware
 
