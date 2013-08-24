@@ -45,7 +45,7 @@ Give it a name. This will create functions `app.modal.my_dialog.show` and `app.m
 ```html
 <ui2:modal name="my_dialog">
 	<p>Content</p>
-	<button x-bind="click:modal.modal-1.close">Close</button>
+	<button x-bind="click:modal.my_dialog.close">Close</button>
 </ui2:modal>
 ```
 
