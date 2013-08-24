@@ -1,7 +1,7 @@
-ui-modal
+derby-ui-modal
 ========
 
-Derby ui component: modal dialog
+Derby ui component: modal dialog.
 
 ## Installation
 
