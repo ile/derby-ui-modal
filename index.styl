@@ -1,0 +1,79 @@
+.modal-backdrop
+	-webkit-animation: 0.4s backdrop_appear cubic-bezier(0,.73,.26,.97)
+	-moz-animation: 0.4s backdrop_appear cubic-bezier(0,.73,.26,.97)
+	-o-animation: 0.4s backdrop_appear cubic-bezier(0,.73,.26,.97)
+	animation: 0.4s backdrop_appear cubic-bezier(0,.73,.26,.97)
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	background-color: #000000;
+	opacity: 0.15
+
+
+.ui-modal
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	z-index: 1050;
+	width: 560px;
+	margin-left: -280px;
+	background-color: #000;
+	background: rgba(255,255,255,0.9);
+	color: #000;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.6);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	outline: none;
+	padding: 1px
+	-webkit-animation: 0.4s modal_appear cubic-bezier(0,.73,.26,.97)
+	-moz-animation: 0.4s modal_appear cubic-bezier(0,.73,.26,.97)
+	-o-animation: 0.4s modal_appear cubic-bezier(0,.73,.26,.97)
+	animation: 0.4s modal_appear cubic-bezier(0,.73,.26,.97)
+
+	&.inverse
+		background: rgba(0,0,0,0.9);
+		color: #fff;
+
+		.ui-modal-body
+			border: solid 1px #444
+
+	.ui-modal-body
+		border: solid 1px #ddd
+		width: 100%
+		height: 100%
+		display: block
+		padding: 10px
+		-webkit-border-radius:8px;
+		-moz-border-radius:8px;
+		border-radius: 8px;
+		box-sizing: border-box
+
+@keyframes backdrop_appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.15;
+    }
+}
+
+
+@keyframes modal_appear {
+    0% {
+        opacity: 0;
+        margin-top: -30px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
