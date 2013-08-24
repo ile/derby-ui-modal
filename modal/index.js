@@ -17,7 +17,10 @@ exports.show = function() {
 
 exports.close = function(action) {
   var cancelled;
+  console.log('close');
+  console.log(action);
   cancelled = this.emitCancellable("close", action);
+  console.log(cancelled);
   if (!cancelled) {
     return this.model.set("show", false);
   }
