@@ -1,7 +1,7 @@
 derby-ui-modal
 ========
 
-Derby ui component: modal dialog.
+[Derby](http://derbyjs.com/) ui component: modal dialog.
 
 ## Installation
 
