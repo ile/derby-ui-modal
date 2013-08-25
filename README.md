@@ -54,8 +54,15 @@ As the functions are created, you can bind a Close button to the closing functio
 
 You can of course combine these parameters.
 
-## Listening events
+## Listening to events
 
+```coffeescript
+  model.on 'change', '_page.modal.modal-2', (value, previous, passed) ->
+    if value is true
+      console.log 'modal created'
+    else if value is undefined
+      console.log 'modal destroyed with action ' + passed.action
+```
 
 
 ## Beware
