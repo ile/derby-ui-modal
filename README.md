@@ -42,6 +42,9 @@ ESC will close the dialog
 ```
 
 Give it a name. This will create functions `app.modal.my_dialog.show` and `app.modal.my_dialog.close` which can be used in templates and in the code.
+
+As the functions are created, you can bind a Close button to the closing function:
+
 ```html
 <ui2:modal name="my_dialog">
 	<p>Content</p>
@@ -51,9 +54,9 @@ Give it a name. This will create functions `app.modal.my_dialog.show` and `app.m
 
 You can of course combine these parameters.
 
-### Note
+## Listening events
 
-You will have to create the close button yourself, and bind it to the appropriate function.
+
 
 ## Beware
 

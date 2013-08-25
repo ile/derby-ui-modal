@@ -16,6 +16,5 @@ exports.show = function() {
 };
 
 exports.close = function(action) {
-  console.log('closing, action = ' + action);
   return this.model.set("show", false);
 };
