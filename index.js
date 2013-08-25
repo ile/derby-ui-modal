@@ -22,11 +22,9 @@ module.exports = function(app, options) {
       return app.fn("modal." + name + ".close", function(e) {
         var action;
         action = e.target.getAttribute("data-action");
-        if (action) {
-          this.model.pass({
-            action: action
-          }).del("_page.modal." + name);
-        }
+        this.model.pass({
+          action: action || void 0
+        }).del("_page.modal." + name);
         return modal.close(action);
       });
     }
