@@ -3,10 +3,7 @@ exports.create = function(model, dom) {
   var self;
   self = this;
   return dom.addListener(document, "keydown", function(e) {
-    console.log('keydown');
     if (model.get('keydown') && model.get('show')) {
-      console.log('keydown - closing');
-      console.log(self);
       if (e.keyCode === 27) {
         return self.close("escape");
       }
@@ -19,5 +16,7 @@ exports.show = function() {
 };
 
 exports.close = function(action) {
-  return this.model.set("show", false);
+  return this.model.pass({
+    action: action
+  }).set("show", false);
 };

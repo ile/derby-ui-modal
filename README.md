@@ -61,10 +61,10 @@ You can of course combine these parameters.
 `_page.modal.my_dialog` will be set or deleted when a modal is created/destroyed:
 
 ```coffeescript
-  model.on 'change', '_page.modal.my_dialog', (value, previous, passed) ->
-    if value is true
+  model.on 'change', '_page.modal.modal-2', (value, previous, passed) ->
+    if value
       console.log 'modal created'
-    else if value is undefined
+    else
       console.log 'modal destroyed with action ' + passed.action
 ```
 
