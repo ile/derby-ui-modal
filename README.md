@@ -57,7 +57,7 @@ You can of course combine these parameters.
 ## Listening to events
 
 ```coffeescript
-  model.on 'change', '_page.modal.modal-2', (value, previous, passed) ->
+  model.on 'change', '_page.modal.my_dialog', (value, previous, passed) ->
     if value is true
       console.log 'modal created'
     else if value is undefined
