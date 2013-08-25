@@ -66,6 +66,15 @@ You can of course combine these parameters.
       console.log 'modal destroyed with action ' + passed.action
 ```
 
+`actoin.passed` is a parameter that can be set in a template:
+
+```html
+<ui2:modal name="my_dialog">
+	<p>Content</p>
+	<button x-bind="click:modal.my_dialog.close" data-action="ok">Ok</button>
+	<button x-bind="click:modal.my_dialog.close" data-action="cancel">Close</button>
+</ui2:modal>
+```
 
 ## Beware
 
