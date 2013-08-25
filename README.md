@@ -56,6 +56,8 @@ You can of course combine these parameters.
 
 ## Listening to events
 
+`_page.modal.my_dialog` will be set or deleted when a modal is created/destroyed:
+
 ```coffeescript
   model.on 'change', '_page.modal.my_dialog', (value, previous, passed) ->
     if value is true
