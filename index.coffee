@@ -10,8 +10,13 @@ module.exports = (app, options) ->
 	app.fn 'ui.modal.create', (modal) ->
 		name = modal.model.get('name')
 		if name
-			app.fn "modal.#{name}.show", -> modal.show()
-			app.fn "modal.#{name}.close", -> modal.close()
+			app.fn "modal.#{name}.show", ->
+				@model.set("_page.modal.#{name}", true)
+				modal.show()
+			app.fn "modal.#{name}.close", (e) ->
+				action = e.target.getAttribute("data-action")
+				@model.pass({ action: action }).del("_page.modal.#{name}") if action
+				modal.close(action)
 
 	app.createLibrary config, options
 

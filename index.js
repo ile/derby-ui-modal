@@ -16,10 +16,17 @@ module.exports = function(app, options) {
     name = modal.model.get('name');
     if (name) {
       app.fn("modal." + name + ".show", function() {
+        this.model.set("_page.modal." + name, true);
         return modal.show();
       });
-      return app.fn("modal." + name + ".close", function() {
-        return modal.close();
+      return app.fn("modal." + name + ".close", function(e) {
+        var action;
+        action = e.target.getAttribute("data-action");
+        console.log('close, action = ' + action);
+        this.model.pass({
+          action: action
+        }).del("_page.modal." + name);
+        return modal.close(action);
       });
     }
   });

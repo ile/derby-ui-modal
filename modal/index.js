@@ -16,20 +16,6 @@ exports.show = function() {
 };
 
 exports.close = function(action) {
-  var cancelled;
-  console.log('close');
-  console.log(action);
-  cancelled = this.emitCancellable("close", action);
-  console.log(cancelled);
-  if (!cancelled) {
-    return this.model.set("show", false);
-  }
-};
-
-exports._click = function(e) {
-  var action;
-  action = e.target.getAttribute("data-action");
-  if (action) {
-    return this.close(action);
-  }
+  console.log('closing, action = ' + action);
+  return this.model.set("show", false);
 };

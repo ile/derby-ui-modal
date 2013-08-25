@@ -9,12 +9,5 @@ exports.show = ->
   @model.set "show", true
 
 exports.close = (action) ->
-  console.log 'close'
-  console.log action
-  cancelled = @emitCancellable("close", action)
-  console.log cancelled
-  @model.set "show", false  unless cancelled
+  @model.set "show", false
 
-exports._click = (e) ->
-  action = e.target.getAttribute("data-action")
-  @close action  if action
