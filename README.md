@@ -20,26 +20,28 @@ app = require('derby').createApp(module)
 
 ### In templates
 
-White dialog
+#### White dialog
 ```html
 <ui2:modal>
 	<p>Content</p>
 </ui2:modal>
 ```
 
-Black dialog
+#### Black dialog
 ```html
 <ui2:modal inverse>
 	<p>Content</p>
 </ui2:modal>
 ```
 
-ESC will close the dialog
+#### ESC will close the dialog
 ```html
 <ui2:modal keydown>
 	<p>Content</p>
 </ui2:modal>
 ```
+
+#### Naming it
 
 Give it a name. This will create functions `app.modal.my_dialog.show` and `app.modal.my_dialog.close` which can be used in templates and in the code.
 

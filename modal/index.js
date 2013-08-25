@@ -2,13 +2,16 @@
 exports.create = function(model, dom) {
   var self;
   self = this;
-  if (model.get('keydown')) {
-    return dom.addListener(document, "keydown", function(e) {
+  return dom.addListener(document, "keydown", function(e) {
+    console.log('keydown');
+    if (model.get('keydown') && model.get('show')) {
+      console.log('keydown - closing');
+      console.log(self);
       if (e.keyCode === 27) {
         return self.close("escape");
       }
-    });
-  }
+    }
+  });
 };
 
 exports.show = function() {

@@ -1,9 +1,12 @@
 exports.create = (model, dom) ->
   self = this
-  if model.get 'keydown'
-    dom.addListener document, "keydown", (e) ->
-      # Escape
-      self.close "escape"  if e.keyCode is 27
+  dom.addListener document, "keydown", (e) ->
+    # Escape
+    console.log 'keydown'
+    if model.get('keydown') and model.get('show')
+      console.log 'keydown - closing'
+      console.log self
+      self.close "escape" if e.keyCode is 27
 
 exports.show = ->
   @model.set "show", true
