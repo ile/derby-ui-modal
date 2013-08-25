@@ -5,7 +5,7 @@ derby-ui-modal
 
 ## Installation
 
-`git clone`
+`npm install derby-ui-modal`
 
 In app.js:
 
