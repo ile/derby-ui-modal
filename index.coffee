@@ -15,7 +15,7 @@ module.exports = (app, options) ->
 				modal.show()
 			app.fn "modal.#{name}.close", (e) ->
 				action = e.target.getAttribute("data-action")
-				@model.pass({ action: action }).del("_page.modal.#{name}") if action
+				@model.pass({ action: action or undefined }).del("_page.modal.#{name}")
 				modal.close(action)
 
 	app.createLibrary config, options
