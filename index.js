@@ -11,14 +11,14 @@ config = {
 };
 
 module.exports = function(app, options) {
-  app.fn('ui.modal.create', function(modal) {
+  app.fn('modal.create', function(modal) {
     var name,
       _this = this;
     name = modal.model.get('name');
     if (name) {
       modal.model.on('change', 'show', function(value, previous, passed) {
         if (value) {
-          return _this.model.set("_page.modal." + name, true);
+          return _this.model.set("_page.modal." + name, {});
         } else {
           return _this.model.pass(passed).del("_page.modal." + name);
         }

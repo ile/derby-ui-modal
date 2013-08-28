@@ -22,21 +22,21 @@ app = require('derby').createApp(module)
 
 #### White dialog
 ```html
-<ui2:modal>
+<ui2:modal bind="create:modal.create">
 	<p>Content</p>
 </ui2:modal>
 ```
 
 #### Black dialog
 ```html
-<ui2:modal inverse>
+<ui2:modal bind="create:modal.create" inverse>
 	<p>Content</p>
 </ui2:modal>
 ```
 
 #### ESC will close the dialog
 ```html
-<ui2:modal keydown>
+<ui2:modal bind="create:modal.create" keydown>
 	<p>Content</p>
 </ui2:modal>
 ```
@@ -48,7 +48,7 @@ Give it a name. This will create functions `app.modal.my_dialog.show` and `app.m
 As the functions are created, you can bind a Close button to the closing function:
 
 ```html
-<ui2:modal name="my_dialog">
+<ui2:modal bind="create:modal.create" name="my_dialog">
 	<p>Content</p>
 	<button x-bind="click:modal.my_dialog.close">Close</button>
 </ui2:modal>
@@ -71,12 +71,16 @@ You can of course combine these parameters.
 `action.passed` is a parameter that can be set in a template:
 
 ```html
-<ui2:modal name="my_dialog">
+<ui2:modal bind="create:modal.create" name="my_dialog">
 	<p>Content</p>
 	<button x-bind="click:modal.my_dialog.close" data-action="ok">Ok</button>
 	<button x-bind="click:modal.my_dialog.close" data-action="cancel">Close</button>
 </ui2:modal>
 ```
+
+## Drawbacks/todo
+
+Unfortunately you will have to provice the parameter `bind="create:modal.create"` to the modal as of now.
 
 ## Beware
 

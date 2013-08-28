@@ -7,13 +7,13 @@ config =
 
 module.exports = (app, options) ->
 
-	app.fn 'ui.modal.create', (modal) ->
+	app.fn 'modal.create', (modal) ->
 		name = modal.model.get('name')
 		if name
 			# listen to change event and pass it to the main app
 			modal.model.on 'change', 'show', (value, previous, passed) =>
 				if value
-					@model.set("_page.modal.#{name}", true)
+					@model.set("_page.modal.#{name}", {})
 				else
 					@model.pass(passed).del("_page.modal.#{name}")
 
