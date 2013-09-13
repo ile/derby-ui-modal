@@ -1,5 +1,5 @@
 <modal: nonvoid>
-	<div style="{#unless :self.show}display:none{/}">
+	<div x-bind="click: _click" style="{#unless :self.show}display:none{/}">
 		<div data-action="backdrop" class="derby-ui-modal-backdrop"></div>
 		<div class="ui-modal {{#if @inverse}}inverse{{/}}">
 			<div class="ui-modal-body">

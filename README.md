@@ -41,20 +41,19 @@ app = require('derby').createApp(module)
 </ui2:modal>
 ```
 
-#### Naming it
-
-Give it a name. This will create functions `app.modal.my_dialog.show` and `app.modal.my_dialog.close` which can be used in templates and in the code.
-
-As the functions are created, you can bind a Close button to the closing function:
+#### Buttons will work too, but they need a `data-action` parameter
 
 ```html
 <ui2:modal bind="create:modal.create" name="my_dialog">
 	<p>Content</p>
-	<button x-bind="click:modal.my_dialog.close">Close</button>
+	<button data-action="cancel">Close</button>
+	<button data-action="save">Save</button>
 </ui2:modal>
 ```
 
-You can of course combine these parameters.
+#### Naming it
+
+Give it a name. This will create functions `app.modal.my_dialog.show` and `app.modal.my_dialog.close` which can be used in templates and in the code.
 
 ## Listening to events
 

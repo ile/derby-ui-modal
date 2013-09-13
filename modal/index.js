@@ -20,3 +20,11 @@ exports.close = function(action) {
     action: action
   }).set("show", false);
 };
+
+exports._click = function(e) {
+  var action;
+  action = e.target.getAttribute("data-action");
+  if (action) {
+    return this.close(action);
+  }
+};

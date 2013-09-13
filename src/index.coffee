@@ -9,5 +9,8 @@ exports.show = ->
   @model.set "show", true
 
 exports.close = (action) ->
-  @model.pass({ action: action }).set("show", false)
+	@model.pass({ action: action }).set("show", false)
 
+exports._click = (e) ->
+  action = e.target.getAttribute("data-action")
+  @close action if action
