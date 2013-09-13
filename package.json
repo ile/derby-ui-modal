@@ -2,7 +2,7 @@
   "author": "Ilkka Huotari <ilkkah@gmail.com>",
   "name": "derby-ui-modal",
   "description": "Derby ui component library / modal",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "git://github.com/ile/derby-ui-modal.git"
