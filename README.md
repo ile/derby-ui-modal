@@ -1,6 +1,6 @@
 #Not maintained
 
-This was made for an early (pre-0.5) version of derby and probably won't work anymore. If anyone wants to fork and improve, be my quest. You would probably be better of with some other solution though.
+![](https://cdn2.iconfinder.com/data/icons/oxygen/48x48/status/dialog-warning.png) This was made for an early (pre-0.5) version of derby and probably won't work anymore. If anyone wants to fork and improve, be my quest. You would probably be better of with some other solution though.
 
 derby-ui-modal
 ========
